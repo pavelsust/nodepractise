@@ -1,0 +1,23 @@
+{
+  "name": "nodeexpresspractise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.7",
+    "debug": "^4.3.4",
+    "express": "^4.17.3",
+    "fawn": "^2.1.5",
+    "joi": "^17.6.0",
+    "joi-objectid": "^4.0.2",
+    "lodash": "^4.17.19",
+    "mongoose": "^6.2.10",
+    "morgan": "^1.10.0"
+  }
+}
