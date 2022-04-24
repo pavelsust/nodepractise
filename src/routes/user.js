@@ -4,7 +4,6 @@ const _ = require('lodash')
 const jwt = require('jsonwebtoken')
 const {validUserRegistration , validUserLoginSchema, User } = require('../model/user-model')
 const bcrypt = require('bcrypt')
-const config = require('config')
 
 user.post('/user/registration', async (request , response)=>{
     let {error} = validUserRegistration(request.body)

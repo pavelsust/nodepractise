@@ -5,17 +5,14 @@ const authMiddleWare = require('../middleware/middleware-auth')
 
 orderRoute.post('/order/create',authMiddleWare, async (request , response)=>{
 
-
-    console.log(request.user._id)
-
     let orderRequest = {
         userId: request.user._id,
         productId: request.body.productId,
         orderAmount: request.body.orderAmount
     }
 
-     let {error} = validateOrder(orderRequest)
-     if (error) return response.status(401).send(JSON.stringify({error: error.message}))
+    let {error} = validateOrder(orderRequest)
+    if (error) return response.status(401).send(JSON.stringify({error: error.message}))
 
     let order =  Order(orderRequest).save()
     let productUpdate =  Product.findByIdAndUpdate(request.body.productId ,{
